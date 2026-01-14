@@ -224,7 +224,7 @@ def _check_splits(x, splits, n_bins, monotonic_trend):
             return splits
         else:
             user_splits = check_array(splits, ensure_2d=False,
-                                      force_all_finite=True)
+                                      ensure_all_finite=True)
 
             if len(set(user_splits)) != len(user_splits):
                 raise ValueError("splits are not unique.")
